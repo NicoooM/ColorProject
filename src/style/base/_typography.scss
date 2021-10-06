@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Baskervville";
+  src: url(./base/fonts/Baskervville-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: url(./base/fonts/Biryani-Regular.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Baskervville";
+}
+h1 {
+  font-size: 54.93px;
+  @include media("<=desktop") {
+    font-size: 96px;
+  }
+  @include media("<=tablet") {
+    font-size: 72px;
+  }
+  @include media("<=phone") {
+    font-size: 48px;
+  }
+}
+h2 {
+  font-size: 28.13px;
+  @include media("<=desktop") {
+    font-size: 72px;
+  }
+  @include media("<=tablet") {
+    font-size: 48px;
+  }
+  @include media("<=phone") {
+    font-size: 36px;
+  }
+}
+
+p {
+  font-family: "Biryani";
+  font-size: 18px;
+  @include media("<=tablet") {
+    font-size: 14px;
+  }
+  @include media("<=phone") {
+    font-size: 12px;
+  }
+}

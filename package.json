@@ -1,0 +1,30 @@
+{
+  "name": "ColorProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cleanup": "rd /s /q .cache dist",
+    "dev": "parcel src/index.html",
+    "build": "npm run cleanup && parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoooM/ColorProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoooM/ColorProject/issues"
+  },
+  "homepage": "https://github.com/NicoooM/ColorProject#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "posthtml-modules": "^0.7.4",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.2"
+  }
+}
