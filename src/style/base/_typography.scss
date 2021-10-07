@@ -9,12 +9,16 @@
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
+h2 {
   font-family: "Baskervville";
 }
+
+h3,
+p,
+label {
+  font-family: "Biryani";
+}
+
 h1 {
   font-size: 54.93px;
   @include media("<=desktop") {
@@ -39,14 +43,35 @@ h2 {
     font-size: 36px;
   }
 }
+h3 {
+  font-size: 40.5px;
+  @include media("<=desktop") {
+    font-size: 72px;
+  }
+  @include media("<=tablet") {
+    font-size: 48px;
+  }
+  @include media("<=phone") {
+    font-size: 36px;
+  }
+}
 
 p {
-  font-family: "Biryani";
   font-size: 18px;
   @include media("<=tablet") {
     font-size: 14px;
   }
   @include media("<=phone") {
     font-size: 12px;
+  }
+}
+
+label {
+  font-size: 14px;
+  @include media("<=tablet") {
+    font-size: 12px;
+  }
+  @include media("<=phone") {
+    font-size: 10px;
   }
 }

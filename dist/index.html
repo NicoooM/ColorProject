@@ -8,9 +8,9 @@
     <title>Purp'Art</title>
   <script src="/main.3d6386d6.js"></script></head>
   <body data-scroll-container="">
-    <header>
+    <!-- <header>
       <span>P'</span>
-    </header>
+    </header> -->
 
     <main>
       <section data-scroll-section="" class="landing">
@@ -23,59 +23,66 @@
           </q>
           <span class="landing__author">Pablo Picasso</span>
         </p>
-        <a class="landing__scroll">
-          <svg width="100" height="100" viewBox="0 0 100 100" fill="#171717" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="49.5" stroke="#F0F0F0"></circle>
-            <path d="M49.6464 77.3536C49.8417 77.5488 50.1583 77.5488 50.3536 77.3536L53.5355 74.1716C53.7308 73.9763 53.7308 73.6597 53.5355 73.4645C53.3403 73.2692 53.0237 73.2692 52.8284 73.4645L50 76.2929L47.1716 73.4645C46.9763 73.2692 46.6597 73.2692 46.4645 73.4645C46.2692 73.6597 46.2692 73.9763 46.4645 74.1716L49.6464 77.3536ZM49.5 22V77H50.5V22H49.5Z" fill="#F0F0F0"></path>
+        <div data-scroll="" data-scroll-speed="4" class="landing__scroll">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="#171717" xmlns="http://www.w3.org/2000/svg" class="scroll">
+            <!-- <circle cx="50" cy="50" r="49.5" stroke="#F0F0F0" /> -->
+            <path class="scroll__svg1" d="M49.6464 77.3536C49.8417 77.5488 50.1583 77.5488 50.3536 77.3536L53.5355 74.1716C53.7308 73.9763 53.7308 73.6597 53.5355 73.4645C53.3403 73.2692 53.0237 73.2692 52.8284 73.4645L50 76.2929L47.1716 73.4645C46.9763 73.2692 46.6597 73.2692 46.4645 73.4645C46.2692 73.6597 46.2692 73.9763 46.4645 74.1716L49.6464 77.3536ZM49.5 22V77H50.5V22H49.5Z" fill="#F0F0F0"></path>
+            <path class="scroll__svg2" d="M49.6464 77.3536C49.8417 77.5488 50.1583 77.5488 50.3536 77.3536L53.5355 74.1716C53.7308 73.9763 53.7308 73.6597 53.5355 73.4645C53.3403 73.2692 53.0237 73.2692 52.8284 73.4645L50 76.2929L47.1716 73.4645C46.9763 73.2692 46.6597 73.2692 46.4645 73.4645C46.2692 73.6597 46.2692 73.9763 46.4645 74.1716L49.6464 77.3536ZM49.5 22V77H50.5V22H49.5Z" fill="#F0F0F0"></path>
           </svg>
-        </a>
-      </section>
+        
+      </div></section>
 
-      <section class="paintings">
-        <ul>
-          <li>
+      <section data-scroll-section="" data-scroll-speed="3" class="paintings" id="paintings">
+        <ul data-scroll-section="">
+          <li data-scroll="">
             <h2>Henri Manguin</h2>
-            <div>
-              <img src="/painting1.8bcb0d82.jpg" alt="">
-              <div>
+            <div class="paintings__painting">
+              <img data-scroll-speed="2" src="/painting1.8bcb0d82.jpg" alt="">
+              <div class="painting__description">
                 <h3>Les grands chênes-lièges</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Veniam!
                 </p>
-                <div>
+                <div class="paintings__filter">
                   <label for="">Filtre</label>
-                  <input type="text">
+                  <input type="checkbox">
                 </div>
               </div>
             </div>
           </li>
 
-          <li>
-            <h2></h2>
-            <div>
-              <img src="" alt="">
-              <div>
-                <h3></h3>
-                <p></p>
-                <div>
-                  <label for=""></label>
-                  <input type="text">
+          <li data-scroll="">
+            <h2>Henri Manguin</h2>
+            <div class="paintings__painting">
+              <div class="painting__description">
+                <h3>Les grands chênes-lièges</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam!
+                </p>
+                <div class="paintings__filter">
+                  <label for="">Filtre</label>
+                  <input type="checkbox">
                 </div>
               </div>
+              <img data-scroll-speed="2" src="/painting1.8bcb0d82.jpg" alt="">
             </div>
           </li>
 
-          <li>
-            <h2></h2>
-            <div>
-              <img src="" alt="">
-              <div>
-                <h3></h3>
-                <p></p>
-                <div>
-                  <label for=""></label>
-                  <input type="text">
+          <li data-scroll="">
+            <h2>Henri Manguin</h2>
+            <div class="paintings__painting">
+              <img data-scroll-speed="2" src="/painting1.8bcb0d82.jpg" alt="">
+              <div class="painting__description">
+                <h3>Les grands chênes-lièges</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam!
+                </p>
+                <div class="paintings__filter">
+                  <label for="">Filtre</label>
+                  <input type="checkbox">
                 </div>
               </div>
             </div>
@@ -83,5 +90,7 @@
         </ul>
       </section>
     </main>
+    <script src="/animations.9060938b.js"></script>
+    <script src="/scroll.1c6e0918.js"></script>
   </body>
 </html>

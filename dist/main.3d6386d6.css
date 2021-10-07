@@ -233,11 +233,14 @@ table {
   src: url(/Biryani-Regular.b6a3f8ba.ttf);
 }
 h1,
-h2,
-h3,
-h4,
-h5 {
+h2 {
   font-family: "Baskervville";
+}
+
+h3,
+p,
+label {
+  font-family: "Biryani";
 }
 
 h1 {
@@ -278,8 +281,26 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 40.5px;
+}
+@media (max-width: 1024px) {
+  h3 {
+    font-size: 72px;
+  }
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 320px) {
+  h3 {
+    font-size: 36px;
+  }
+}
+
 p {
-  font-family: "Biryani";
   font-size: 18px;
 }
 @media (max-width: 768px) {
@@ -293,28 +314,47 @@ p {
   }
 }
 
+label {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  label {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  label {
+    font-size: 10px;
+  }
+}
+
+@keyframes Scroll {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(-10%);
+  }
+  40% {
+    transform: translateY(0%);
+  }
+  60% {
+    transform: translateY(-5%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #171717;
   color: #f0f0f0;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #929292;
-  border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #808080;
-}
-
-::-webkit-scrollbar-track {
-  background: antiquewhite;
-  border-radius: 9px;
 }
 
 .btn {
@@ -332,13 +372,14 @@ header span {
 
 main .landing {
   height: 90vh;
+  text-align: center;
 }
 main .landing h1 {
   position: absolute;
   font-size: 270px;
   color: transparent;
   -webkit-text-stroke: 1px #f0f0f0;
-  top: 50%;
+  top: 10%;
   transform: rotate(-90deg) translateY(-130%);
 }
 main .landing .landing__text {
@@ -359,13 +400,71 @@ main .landing .landing__text .landing__author {
   font-style: italic;
 }
 main .landing .landing__scroll {
-  margin-top: 10vh;
-  display: block;
+  display: inline-block;
+  margin: 10vh auto 0 auto;
   text-align: center;
   cursor: pointer;
+  position: relative;
+}
+main .landing .landing__scroll svg path:first-child {
+  transition: 0.5s;
+  animation-name: Scroll;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+main .landing .landing__scroll svg path:last-child {
+  transition: 0.5s;
+  transform: scaleY(0);
 }
 main .paintings {
   padding: 0 11.5%;
+}
+main .paintings ul li:not(:first-child) {
+  margin-top: 20rem;
+}
+main .paintings ul li:last-child {
+  margin-bottom: 10rem;
+}
+main .paintings h2 {
+  margin-bottom: 2rem;
+}
+main .paintings .paintings__painting {
+  display: flex;
+  justify-content: space-between;
+}
+main .paintings .paintings__painting img {
+  width: 50%;
+  position: relative;
+}
+main .paintings .paintings__painting img::after {
+  z-index: 2;
+  content: "";
+  width: 150px;
+  height: 100px;
+  background-color: #fbe0ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .paintings .paintings__painting .painting__description {
+  align-self: center;
+}
+main .paintings .paintings__painting .painting__description h3 {
+  border-bottom: 2px solid #f0f0f0;
+}
+main .paintings .paintings__painting .painting__description p {
+  width: 260px;
+  margin: 2rem 0;
+}
+main .paintings .paintings__painting .painting__description .paintings__filter {
+  display: flex;
+  flex-direction: column;
+}
+main .paintings .paintings__painting .painting__description .paintings__filter input {
+  margin: 0;
+  margin-top: 0.5rem;
 }
 
 /*# sourceMappingURL=/main.3d6386d6.css.map */

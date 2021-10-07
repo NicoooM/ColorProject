@@ -10,12 +10,13 @@ header {
 main {
   .landing {
     height: 90vh;
+    text-align: center;
     h1 {
       position: absolute;
       font-size: 270px;
       color: transparent;
       -webkit-text-stroke: 1px $blanc;
-      top: 50%;
+      top: 10%;
       transform: rotate(-90deg) translateY(-130%);
     }
     .landing__text {
@@ -36,14 +37,98 @@ main {
       }
     }
     .landing__scroll {
-      margin-top: 10vh;
-      display: block;
+      display: inline-block;
+      margin: 10vh auto 0 auto;
       text-align: center;
       cursor: pointer;
+      position: relative;
+      // &:hover::after {
+      // animation-name: ScrollCircle;
+      // animation-duration: 3s;
+      // animation-fill-mode: forwards;
+      // animation-iteration-count: infinite;
+      // animation-timing-function: ease-in-out;
+      // transform: translateY(-50%) translateX(-50%) scaleX(1) scaleY(1);
+      // }
+      // &::after {
+      //   content: "";
+      //   border-radius: 50%;
+      //   border: 1px solid $blanc;
+      //   width: 70px;
+      //   height: 70px;
+      //   position: absolute;
+      //   left: 50%;
+      //   top: 50%;
+      //   transition: 1s;
+      //   transform: translateY(-50%) translateX(-50%);
+      // }
+      // &:hover + svg {
+      //   -webkit-animation: 0;
+      //   animation: 0;
+      //   animation-iteration-count: 0;
+      // }
+      svg path:first-child {
+        // transform: scaleY(10);
+        transition: 0.5s;
+        animation-name: Scroll;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+      svg path:last-child {
+        transition: 0.5s;
+        transform: scaleY(0);
+      }
     }
   }
 
   .paintings {
     padding: 0 11.5%;
+    ul li:not(:first-child) {
+      margin-top: 20rem;
+    }
+    ul li:last-child {
+      margin-bottom: 10rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    .paintings__painting {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 50%;
+        position: relative;
+        &::after {
+          z-index: 2;
+          content: "";
+          width: 150px;
+          height: 100px;
+          background-color: $primary;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      .painting__description {
+        align-self: center;
+        h3 {
+          border-bottom: 2px solid $blanc;
+        }
+        p {
+          width: 260px;
+          margin: 2rem 0;
+        }
+        .paintings__filter {
+          display: flex;
+          flex-direction: column;
+          input {
+            margin: 0;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
   }
 }
