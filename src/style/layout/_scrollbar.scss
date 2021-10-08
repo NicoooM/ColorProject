@@ -1,15 +1,14 @@
-// ::-webkit-scrollbar {
-//   width: 10px;
-//   height: 10px;
-// }
-// ::-webkit-scrollbar-thumb {
-//   background: #929292;
-//   border-radius: 0px;
-// }
-// ::-webkit-scrollbar-thumb:hover {
-//   background: #808080;
-// }
-// ::-webkit-scrollbar-track {
-//   background: antiquewhite;
-//   border-radius: 9px;
-// }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: $noir;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+::-webkit-scrollbar-track {
+  background: $blanc;
+}

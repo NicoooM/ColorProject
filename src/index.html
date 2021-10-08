@@ -7,27 +7,22 @@
     <link rel="stylesheet" href="./style/main.scss" />
     <title>Purp'Art</title>
   </head>
-  <body data-scroll-container>
-    <!-- <header>
-      <span>P'</span>
-    </header> -->
-
-    <main>
-      <section data-scroll-section class="landing">
-        <h1 data-scroll="">Purp'art</h1>
-        <p data-scroll class="landing__text">
+  <body
+    onload="document.getElementsByTagName('body')[0].style.opacity = '1';"
+    style="opacity: 0"
+  >
+    <main class="main">
+      <section class="landing">
+        <h1>Purp'art</h1>
+        <p class="citation">
           <q>
             'Chaque enfant est un artiste...<br />
             Le problème est de savoir comment rester un artiste une fois que
             nous aurons grandi.'
           </q>
-          <span class="landing__author">Pablo Picasso</span>
+          <span class="citation__author">Pablo Picasso</span>
         </p>
-        <div
-          data-scroll
-          data-scroll-speed="4"
-          class="landing__scroll"
-        >
+        <span class="landing__scroll">
           <svg
             width="100"
             height="100"
@@ -48,73 +43,87 @@
               fill="#F0F0F0"
             />
           </svg>
-        </a>
+        </span>
       </section>
 
-      <section
-        data-scroll-section
-        data-scroll-speed="3"
-        class="paintings"
-        id="paintings"
-      >
-        <ul data-scroll-section>
-          <li data-scroll>
+      <section class="paintings" id="paintings">
+        <ul>
+          <li>
             <h2>Henri Manguin</h2>
             <div class="paintings__painting">
-              <img data-scroll-speed="2" src="./img/painting1.jpg" alt="" />
+              <img src="./img/painting1.jpg" alt="" class="img-1" />
               <div class="painting__description">
                 <h3>Les grands chênes-lièges</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam!
+                  Les grands chênes/Liège est un tableau impressionniste peint
+                  en 1905 par Henry Manguin. Avec ses feuillages bleutés, les
+                  ombres violette, et les touche de rose pale accentue la
+                  froideur de l'œuvre, cette froideur est contrasté avec des
+                  touches de lumières orangés. L'œil du spectateur se balade au
+                  grés des branches pour se perdre dans le paysage en arrière
+                  plan, nous rappelant un crépuscule.
                 </p>
-                <div class="paintings__filter">
-                  <label for="">Filtre</label>
-                  <input type="checkbox" />
-                </div>
               </div>
             </div>
           </li>
-
-          <li data-scroll>
-            <h2>Henri Manguin</h2>
+          <p class="citation citation--renoir">
+            <q>
+              'Un matin l’un de nous manquait de noir, se servit de bleu :<br />
+              L’impressionisme etait née.'
+            </q>
+            <span class="citation__author">Pierre Auguste Renoir</span>
+          </p>
+          <li>
+            <h2>Henri Matisse</h2>
             <div class="paintings__painting">
               <div class="painting__description">
-                <h3>Les grands chênes-lièges</h3>
+                <h3>Paysage de Saint Tropez au crépuscule</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam!
+                  Paysage de Saint Tropez au crépuscule est un tableau
+                  impressionniste peint en 1904 par Henry Matisse. Dans cette
+                  composition où la distinction entre ciel et terre se devine
+                  juste, la vert des arbres au centre du tableau contraste avec
+                  les couleur pastel du ciel, au milieu des pleine, caché par
+                  les les feuillages on peut apercevoir une bâtisse, comme fondu
+                  dans le décors
                 </p>
-                <div class="paintings__filter">
-                  <label for="">Filtre</label>
-                  <input type="checkbox" />
-                </div>
               </div>
-              <img data-scroll-speed="2" src="./img/painting1.jpg" alt="" />
+              <img src="./img/painting2.jpg" alt="" />
             </div>
           </li>
-
-          <li data-scroll>
+          <p class="citation citation--hopper">
+            <q>
+              'Si vous pouviez le dire avec des mots, il n'y aurait aucune
+              raison de le peindre'
+            </q>
+            <span class="citation__author">Edward Hopper</span>
+          </p>
+          <li class="painting__last">
             <h2>Henri Manguin</h2>
             <div class="paintings__painting">
-              <img data-scroll-speed="2" src="./img/painting1.jpg" alt="" />
+              <img src="./img/painting3.jpg" alt="" />
               <div class="painting__description">
-                <h3>Les grands chênes-lièges</h3>
+                <h3>Le rocher</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam!
+                  Le rocher de Manguin est un tableaux impressionniste de 1904.
+                  Sur cette composition, les rocher aux couleur violette
+                  contraste avec le bleu et le jaune de l'eau, les reflets
+                  verdatre des rocher dans l'eau apporte de la profondeurs au
+                  paysage, mettant en avant la femme se prélassant aux premier
+                  plan, sa peau dorée se détache du décors qui l'entoure.
                 </p>
-                <div class="paintings__filter">
-                  <label for="">Filtre</label>
-                  <input type="checkbox" />
-                </div>
               </div>
             </div>
           </li>
         </ul>
       </section>
+      <div class="gradient">
+        <p>Copyright ©2021</p>
+        <p>Fait par Nicolas Marsan, Arthur Blanc et Sarah Marguerettaz</p>
+      </div>
     </main>
     <script src="./js/animations.js"></script>
     <script src="./js/scroll.js"></script>
+    <script src="./js/parallax.js"></script>
   </body>
 </html>

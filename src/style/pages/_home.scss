@@ -1,13 +1,22 @@
-header {
-  padding: 10px;
-  height: 10vh;
-  span {
-    font-size: 72px;
-    line-height: 75%;
-  }
-}
-
 main {
+  padding-top: 35vh;
+  .citation {
+    margin: 0 auto 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Baskervville";
+    font-size: 30px;
+    q {
+      text-align: center;
+      display: block;
+      margin-bottom: 4rem;
+    }
+    .citation__author {
+      align-self: flex-end;
+      font-style: italic;
+    }
+  }
   .landing {
     height: 90vh;
     text-align: center;
@@ -16,59 +25,17 @@ main {
       font-size: 270px;
       color: transparent;
       -webkit-text-stroke: 1px $blanc;
-      top: 10%;
-      transform: rotate(-90deg) translateY(-130%);
-    }
-    .landing__text {
-      margin: 35vh auto 0 auto;
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      font-family: "Baskervville";
-      font-size: 30px;
-      q {
-        text-align: center;
-        display: block;
-        margin-bottom: 4rem;
-      }
-      .landing__author {
-        align-self: flex-end;
-        font-style: italic;
-      }
+      top: 0;
+      left: 5%;
+      transform: translateY(-130%);
+      writing-mode: vertical-rl;
     }
     .landing__scroll {
       display: inline-block;
       margin: 10vh auto 0 auto;
       text-align: center;
-      cursor: pointer;
       position: relative;
-      // &:hover::after {
-      // animation-name: ScrollCircle;
-      // animation-duration: 3s;
-      // animation-fill-mode: forwards;
-      // animation-iteration-count: infinite;
-      // animation-timing-function: ease-in-out;
-      // transform: translateY(-50%) translateX(-50%) scaleX(1) scaleY(1);
-      // }
-      // &::after {
-      //   content: "";
-      //   border-radius: 50%;
-      //   border: 1px solid $blanc;
-      //   width: 70px;
-      //   height: 70px;
-      //   position: absolute;
-      //   left: 50%;
-      //   top: 50%;
-      //   transition: 1s;
-      //   transform: translateY(-50%) translateX(-50%);
-      // }
-      // &:hover + svg {
-      //   -webkit-animation: 0;
-      //   animation: 0;
-      //   animation-iteration-count: 0;
-      // }
       svg path:first-child {
-        // transform: scaleY(10);
         transition: 0.5s;
         animation-name: Scroll;
         animation-duration: 3s;
@@ -85,14 +52,25 @@ main {
 
   .paintings {
     padding: 0 11.5%;
+    // margin-bottom: 10rem;
+    // ul li {
+    // perspective: 50px;
+    // }
     ul li:not(:first-child) {
       margin-top: 20rem;
     }
     ul li:last-child {
-      margin-bottom: 10rem;
+      // margin-bottom: 10rem;
+      min-height: 500px;
     }
     h2 {
       margin-bottom: 2rem;
+    }
+    .citation--renoir {
+      margin: 20rem 0 0 auto;
+    }
+    .citation--hopper {
+      margin: 20rem auto 0 0;
     }
     .paintings__painting {
       display: flex;
@@ -100,6 +78,9 @@ main {
       img {
         width: 50%;
         position: relative;
+        // transform: translateZ(50px);
+        // -webkit-transform-style: preserve-3d;
+        // transform-style: preserve-3d;
         &::after {
           z-index: 2;
           content: "";
@@ -115,10 +96,12 @@ main {
         align-self: center;
         h3 {
           border-bottom: 2px solid $blanc;
+          max-width: 500px;
         }
         p {
-          width: 260px;
+          width: 400px;
           margin: 2rem 0;
+          line-height: 140%;
         }
         .paintings__filter {
           display: flex;
@@ -129,6 +112,23 @@ main {
           }
         }
       }
+    }
+  }
+  .gradient {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 11.5% 2% 11.5%;
+    height: 30rem;
+    width: auto;
+    background: rgb(23, 23, 23);
+    background: linear-gradient(
+      180deg,
+      rgba(23, 23, 23, 1) 0%,
+      rgba(79, 79, 79, 1) 100%
+    );
+    p {
+      font-size: 14px;
     }
   }
 }
