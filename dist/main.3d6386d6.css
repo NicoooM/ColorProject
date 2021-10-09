@@ -620,6 +620,7 @@ main #elemBottom {
   body main .paintings .paintings__painting img {
     width: 50%;
     position: relative;
+    object-fit: cover;
   }
   body main .paintings .paintings__painting img::after {
     z-index: 2;
@@ -634,6 +635,9 @@ main #elemBottom {
   body main .paintings .paintings__painting .painting__description {
     align-self: center;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   body main .paintings .paintings__painting .painting__description h3 {
     border-bottom: 2px solid #f0f0f0;
