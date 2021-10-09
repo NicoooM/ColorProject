@@ -382,6 +382,9 @@ body {
 main {
   padding-top: 35vh;
 }
+main .elementStyle {
+  position: absolute;
+}
 main .citation {
   margin: 0 auto 0 auto;
   width: 50%;
@@ -399,19 +402,30 @@ main .citation .citation__author {
   align-self: flex-end;
   font-style: italic;
 }
+main .citation #elemPLeftText {
+  left: 10%;
+}
+main .citation #elemPLeftText2Citation {
+  right: 10%;
+}
 main .landing {
   height: 90vh;
   text-align: center;
 }
+main .landing #elemTopLeft {
+  top: 5%;
+  left: 2%;
+}
+main .landing #elemPhraseLeft {
+  left: 150px;
+}
+main .landing #elemPhraseRight {
+  right: 150px;
+}
 main .landing h1 {
-  position: absolute;
-  font-size: 270px;
-  color: transparent;
-  -webkit-text-stroke: 1px #f0f0f0;
-  top: 0;
-  left: 5%;
-  transform: translateY(-130%);
-  writing-mode: vertical-rl;
+  font-size: 200px;
+  opacity: 50%;
+  text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #fdfdfd 1px -1px;
 }
 main .landing .landing__scroll {
   display: inline-block;
@@ -487,6 +501,10 @@ main .paintings .paintings__painting .painting__description .paintings__filter i
   margin: 0;
   margin-top: 0.5rem;
 }
+main .paintings #second-painting {
+  display: flex;
+  flex-direction: row-reverse;
+}
 main .gradient {
   display: flex;
   align-items: end;
@@ -495,10 +513,315 @@ main .gradient {
   height: 30rem;
   width: auto;
   background: #171717;
-  background: linear-gradient(180deg, #171717 0%, #4f4f4f 100%);
 }
 main .gradient p {
   font-size: 14px;
+}
+main #elemBottom {
+  right: 3%;
+  margin-top: -240px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-color: #171717;
+  }
+  body h3 {
+    font-size: 32px;
+  }
+  body main {
+    padding-top: 35vh;
+  }
+  body main .elementStyle {
+    position: absolute;
+    width: 35vw;
+  }
+  body main .citation {
+    margin: 0 auto 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Baskervville";
+    font-size: 30px;
+  }
+  body main .citation q {
+    text-align: center;
+    display: block;
+    margin-bottom: 4rem;
+  }
+  body main .citation .citation__author {
+    align-self: flex-end;
+    font-style: italic;
+  }
+  body main .citation #elemPLeftText {
+    left: 10%;
+  }
+  body main .citation #elemPLeftText2Citation {
+    right: 10%;
+  }
+  body main .landing {
+    height: 90vh;
+    text-align: center;
+  }
+  body main .landing #elemTopLeft {
+    top: 5%;
+    left: 2%;
+  }
+  body main .landing #elemPhraseLeft {
+    left: 150px;
+  }
+  body main .landing #elemPhraseRight {
+    right: 150px;
+  }
+  body main .landing h1 {
+    font-size: 200px;
+    opacity: 50%;
+    text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #fdfdfd 1px -1px;
+  }
+  body main .landing .landing__scroll {
+    display: inline-block;
+    margin: 10vh auto 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  body main .landing .landing__scroll svg path:first-child {
+    transition: 0.5s;
+    animation-name: Scroll;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  body main .landing .landing__scroll svg path:last-child {
+    transition: 0.5s;
+    transform: scaleY(0);
+  }
+  body main .paintings ul li:not(:first-child) {
+    margin-top: 20rem;
+  }
+  body main .paintings ul li:last-child {
+    min-height: 500px;
+  }
+  body main .paintings h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body main .paintings .citation--renoir {
+    margin: 20rem 0 0 auto;
+  }
+  body main .paintings .citation--hopper {
+    margin: 20rem auto 0 0;
+  }
+  body main .paintings .paintings__painting {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  body main .paintings .paintings__painting img {
+    width: 50%;
+    position: relative;
+  }
+  body main .paintings .paintings__painting img::after {
+    z-index: 2;
+    content: "";
+    width: 150px;
+    height: 100px;
+    background-color: #fbe0ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body main .paintings .paintings__painting .painting__description {
+    align-self: center;
+    text-align: center;
+  }
+  body main .paintings .paintings__painting .painting__description h3 {
+    border-bottom: 2px solid #f0f0f0;
+    max-width: 500px;
+  }
+  body main .paintings .paintings__painting .painting__description p {
+    margin-right: 0px !important;
+    width: 400px;
+    align-items: center;
+    line-height: 140%;
+    text-align: center;
+  }
+  body main .paintings .paintings__painting .painting__description .paintings__filter {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .paintings .paintings__painting .painting__description .paintings__filter input {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+  body main .paintings #second-painting {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .gradient {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 11.5% 2% 11.5%;
+    height: 30rem;
+    width: auto;
+    background: #171717;
+  }
+  body main .gradient p {
+    font-size: 14px;
+  }
+  body main #elemBottom {
+    right: 3%;
+    margin-top: -150px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #fc00e7;
+  }
+  body h3 {
+    font-size: 32px;
+  }
+  body main {
+    padding-top: 35vh;
+  }
+  body main .elementStyle {
+    position: absolute;
+  }
+  body main .citation {
+    margin: 0 auto 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Baskervville";
+    font-size: 30px;
+  }
+  body main .citation q {
+    text-align: center;
+    display: block;
+    margin-bottom: 4rem;
+  }
+  body main .citation .citation__author {
+    align-self: flex-end;
+    font-style: italic;
+  }
+  body main .citation #elemPLeftText {
+    left: 10%;
+  }
+  body main .citation #elemPLeftText2Citation {
+    right: 10%;
+  }
+  body main .landing {
+    height: 90vh;
+    text-align: center;
+  }
+  body main .landing #elemTopLeft {
+    top: 5%;
+    left: 2%;
+  }
+  body main .landing #elemPhraseLeft {
+    left: 150px;
+  }
+  body main .landing #elemPhraseRight {
+    right: 150px;
+  }
+  body main .landing h1 {
+    font-size: 200px;
+    opacity: 50%;
+    text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #fdfdfd 1px -1px;
+  }
+  body main .landing .landing__scroll {
+    display: inline-block;
+    margin: 10vh auto 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  body main .landing .landing__scroll svg path:first-child {
+    transition: 0.5s;
+    animation-name: Scroll;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  body main .landing .landing__scroll svg path:last-child {
+    transition: 0.5s;
+    transform: scaleY(0);
+  }
+  body main .paintings {
+    padding: 0 11.5%;
+  }
+  body main .paintings ul li:not(:first-child) {
+    margin-top: 20rem;
+  }
+  body main .paintings ul li:last-child {
+    min-height: 500px;
+  }
+  body main .paintings h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body main .paintings .citation--renoir {
+    margin: 20rem 0 0 auto;
+  }
+  body main .paintings .citation--hopper {
+    margin: 20rem auto 0 0;
+  }
+  body main .paintings .paintings__painting {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  body main .paintings .paintings__painting img {
+    width: 50%;
+    position: relative;
+  }
+  body main .paintings .paintings__painting img::after {
+    z-index: 2;
+    content: "";
+    width: 150px;
+    height: 100px;
+    background-color: #fbe0ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body main .paintings .paintings__painting .painting__description {
+    align-self: center;
+    text-align: center;
+  }
+  body main .paintings .paintings__painting .painting__description h3 {
+    border-bottom: 2px solid #f0f0f0;
+    max-width: 500px;
+  }
+  body main .paintings .paintings__painting .painting__description p {
+    width: 400px;
+    line-height: 140%;
+  }
+  body main .paintings .paintings__painting .painting__description .paintings__filter {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .paintings .paintings__painting .painting__description .paintings__filter input {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+  body main .gradient {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 11.5% 2% 11.5%;
+    height: 30rem;
+    width: auto;
+    background: #171717;
+  }
+  body main .gradient p {
+    font-size: 14px;
+  }
+  body main #elemBottom {
+    right: 3%;
+    margin-top: -150px;
+  }
 }
 
 /*# sourceMappingURL=/main.3d6386d6.css.map */

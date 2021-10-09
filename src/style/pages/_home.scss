@@ -1,4 +1,7 @@
 main {
+  .elementStyle {
+    position: absolute;
+  }
   padding-top: 35vh;
   .citation {
     margin: 0 auto 0 auto;
@@ -16,19 +19,35 @@ main {
       align-self: flex-end;
       font-style: italic;
     }
+
+    #elemPLeftText {
+      left: 10%;
+    }
+
+    #elemPLeftText2Citation {
+      right: 10%;
+    }
   }
   .landing {
     height: 90vh;
     text-align: center;
+
+    #elemTopLeft {
+      top: 5%;
+      left: 2%;
+    }
+
+    #elemPhraseLeft {
+      left: 150px;
+    }
+    #elemPhraseRight {
+      right: 150px;
+    }
+
     h1 {
-      position: absolute;
-      font-size: 270px;
-      color: transparent;
-      -webkit-text-stroke: 1px $blanc;
-      top: 0;
-      left: 5%;
-      transform: translateY(-130%);
-      writing-mode: vertical-rl;
+      font-size: 200px;
+      opacity: 50%;
+      text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #fdfdfd 1px -1px;
     }
     .landing__scroll {
       display: inline-block;
@@ -113,6 +132,12 @@ main {
         }
       }
     }
+
+
+    #second-painting{
+display: flex;
+flex-direction: row-reverse;
+    }
   }
   .gradient {
     display: flex;
@@ -122,13 +147,14 @@ main {
     height: 30rem;
     width: auto;
     background: rgb(23, 23, 23);
-    background: linear-gradient(
-      180deg,
-      rgba(23, 23, 23, 1) 0%,
-      rgba(79, 79, 79, 1) 100%
-    );
+
     p {
       font-size: 14px;
     }
+  }
+
+  #elemBottom {
+    right: 3%;
+    margin-top: -240px;
   }
 }

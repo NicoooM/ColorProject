@@ -1,0 +1,178 @@
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(252, 0, 231);
+
+h3{
+    font-size: 32px;
+}
+      main {
+        .elementStyle {
+          position: absolute;
+        }
+        padding-top: 35vh;
+        .citation {
+          margin: 0 auto 0 auto;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          font-family: "Baskervville";
+          font-size: 30px;
+          q {
+            text-align: center;
+            display: block;
+            margin-bottom: 4rem;
+          }
+          .citation__author {
+            align-self: flex-end;
+            font-style: italic;
+          }
+      
+          #elemPLeftText {
+            left: 10%;
+          }
+      
+          #elemPLeftText2Citation {
+            right: 10%;
+          }
+        }
+        .landing {
+          height: 90vh;
+          text-align: center;
+      
+          #elemTopLeft {
+            top: 5%;
+            left: 2%;
+          }
+      
+          #elemPhraseLeft {
+            left: 150px;
+          }
+          #elemPhraseRight {
+            right: 150px;
+          }
+      
+          h1 {
+            font-size: 200px;
+            opacity: 50%;
+            text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #fdfdfd 1px -1px;
+          }
+          .landing__scroll {
+            display: inline-block;
+            margin: 10vh auto 0 auto;
+            text-align: center;
+            position: relative;
+            svg path:first-child {
+              transition: 0.5s;
+              animation-name: Scroll;
+              animation-duration: 3s;
+              animation-fill-mode: forwards;
+              animation-iteration-count: infinite;
+              animation-timing-function: ease-in-out;
+            }
+            svg path:last-child {
+              transition: 0.5s;
+              transform: scaleY(0);
+            }
+          }
+        }
+      
+        .paintings {
+          padding: 0 11.5%;
+          // margin-bottom: 10rem;
+          // ul li {
+          // perspective: 50px;
+          // }
+          ul li:not(:first-child) {
+            margin-top: 20rem;
+          }
+          ul li:last-child {
+            // margin-bottom: 10rem;
+            min-height: 500px;
+          }
+          h2 {
+              text-align: center;
+            margin-bottom: 2rem;
+          }
+          .citation--renoir {
+            margin: 20rem 0 0 auto;
+          }
+          .citation--hopper {
+            margin: 20rem auto 0 0;
+          }
+          .paintings__painting {
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+              
+            
+            img {
+              width: 50%;
+              position: relative;
+              // transform: translateZ(50px);
+              // -webkit-transform-style: preserve-3d;
+              // transform-style: preserve-3d;
+              &::after {
+                z-index: 2;
+                content: "";
+                width: 150px;
+                height: 100px;
+                background-color: $primary;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+            .painting__description {
+              align-self: center;
+              text-align: center;
+              h3 {
+                border-bottom: 2px solid $blanc;
+                max-width: 500px;
+              }
+              p {
+                width: 400px;
+               
+                line-height: 140%;
+              }
+              .paintings__filter {
+                display: flex;
+                flex-direction: column;
+                input {
+                  margin: 0;
+                  margin-top: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+        .gradient {
+          display: flex;
+          align-items: end;
+          justify-content: space-between;
+          padding: 0 11.5% 2% 11.5%;
+          height: 30rem;
+          width: auto;
+          background: rgb(23, 23, 23);
+      
+          p {
+            font-size: 14px;
+          }
+        }
+      
+        #elemBottom {
+          right: 3%;
+          margin-top: -150px;
+        }
+      }
+      
+
+
+      
+    }
+  }
+
+
+
+
+
+  
