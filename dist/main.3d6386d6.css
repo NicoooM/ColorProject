@@ -738,12 +738,14 @@ main #elemBottom {
     font-size: 30px;
   }
   body main .citation q {
+    font-size: 24px;
     text-align: center;
     display: block;
     margin-bottom: 4rem;
   }
   body main .citation .citation__author {
-    align-self: flex-end;
+    align-self: center;
+    font-size: 32px;
     font-style: italic;
   }
   body main .citation #elemPLeftText {
@@ -753,6 +755,7 @@ main #elemBottom {
     right: 10%;
   }
   body main .landing {
+    margin-top: -100px;
     height: 90vh;
     text-align: center;
   }

@@ -18,12 +18,14 @@
         font-family: "Baskervville";
         font-size: 30px;
         q {
+          font-size: 24px;
           text-align: center;
           display: block;
           margin-bottom: 4rem;
         }
         .citation__author {
-          align-self: flex-end;
+          align-self: center;
+          font-size: 32px;
           font-style: italic;
         }
 
@@ -36,6 +38,7 @@
         }
       }
       .landing {
+        margin-top: -100px;
         height: 90vh;
         text-align: center;
 
