@@ -1,15 +1,21 @@
 @media only screen and (max-width: 600px) {
   body {
     background-color: $background;
+    padding: 0px 10px;
 
     h3 {
-      font-size: 32px;
+      font-size: 24px;
     }
     main {
       .elementStyle {
         position: absolute;
       }
-      padding-top: 35vh;
+      padding-top: 20vh;
+
+      #citationHome {
+color: #ffffff;
+
+      }
       .citation {
         margin: 0 auto 0 auto;
         width: 50%;
@@ -38,7 +44,7 @@
         }
       }
       .landing {
-        margin-top: -100px;
+       
         height: 90vh;
         text-align: center;
 
@@ -81,10 +87,7 @@
 
       .paintings {
         padding: 0 11.5%;
-        // margin-bottom: 10rem;
-        // ul li {
-        // perspective: 50px;
-        // }
+     
         ul li:not(:first-child) {
           margin-top: 20rem;
         }
@@ -93,8 +96,9 @@
           min-height: 500px;
         }
         h2 {
-          text-align: center;
+          text-align: left;
           margin-bottom: 2rem;
+          font-size: 30px;
         }
         .citation--renoir {
           margin: 20rem 0 0 auto;
@@ -108,7 +112,7 @@
           flex-direction: column;
 
           img {
-            width: 50%;
+            width: 110%;
             position: relative;
             // transform: translateZ(50px);
             // -webkit-transform-style: preserve-3d;
@@ -132,7 +136,7 @@
               max-width: 500px;
             }
             p {
-              width: 400px;
+              
 
               line-height: 140%;
             }
