@@ -727,12 +727,13 @@ main #elemBottom {
 @media only screen and (max-width: 600px) {
   body {
     background-color: #171717;
+    padding: 0px 10px;
   }
   body h3 {
-    font-size: 32px;
+    font-size: 24px;
   }
   body main {
-    padding-top: 35vh;
+    padding-top: 20vh;
   }
   body main .elementStyle {
     position: absolute;
@@ -763,7 +764,6 @@ main #elemBottom {
     right: 10%;
   }
   body main .landing {
-    margin-top: -100px;
     height: 90vh;
     text-align: center;
   }
@@ -810,8 +810,9 @@ main #elemBottom {
     min-height: 500px;
   }
   body main .paintings h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
+    font-size: 30px;
   }
   body main .paintings .citation--renoir {
     margin: 20rem 0 0 auto;
@@ -825,7 +826,7 @@ main #elemBottom {
     flex-direction: column;
   }
   body main .paintings .paintings__painting img {
-    width: 50%;
+    width: 110%;
     position: relative;
   }
   body main .paintings .paintings__painting img::after {
@@ -847,7 +848,6 @@ main #elemBottom {
     max-width: 500px;
   }
   body main .paintings .paintings__painting .painting__description p {
-    width: 400px;
     line-height: 140%;
   }
   body main .paintings .paintings__painting .painting__description .paintings__filter {
