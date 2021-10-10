@@ -718,7 +718,7 @@ main #elemBottom {
 }
 @media only screen and (max-width: 600px) {
   body {
-    background-color: #fc00e7;
+    background-color: #171717;
   }
   body h3 {
     font-size: 32px;
