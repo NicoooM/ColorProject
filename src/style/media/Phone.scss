@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
   body {
-    background-color: rgb(252, 0, 231);
+    background-color: $background;
 
     h3 {
       font-size: 32px;
@@ -54,8 +54,7 @@
         h1 {
           font-size: 200px;
           opacity: 50%;
-          text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px,
-            #fdfdfd 1px -1px;
+          text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #fdfdfd 1px -1px;
         }
         .landing__scroll {
           display: inline-block;
