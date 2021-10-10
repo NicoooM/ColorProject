@@ -11,6 +11,10 @@ main {
     font-family: "Baskervville";
     font-size: 30px;
     q {
+      
+        -webkit-animation: text-focus-in 2s ease-out forwards;
+                animation: text-focus-in 2s ease-out forwards;
+      
       text-align: center;
       display: block;
       margin-bottom: 4rem;
