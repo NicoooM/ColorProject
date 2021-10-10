@@ -51,7 +51,8 @@ main {
     h1 {
       font-size: 200px;
       opacity: 50%;
-      text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #fdfdfd 1px -1px;
+      text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px,
+        #fdfdfd 1px -1px;
     }
     .landing__scroll {
       display: inline-block;
@@ -100,7 +101,14 @@ main {
       justify-content: space-between;
       img {
         width: 50%;
+        object-fit: cover;
         position: relative;
+        &:not(.painting--2) {
+          margin-right: 3%;
+        }
+        &.painting--2 {
+          margin-left: 3%;
+        }
         // transform: translateZ(50px);
         // -webkit-transform-style: preserve-3d;
         // transform-style: preserve-3d;
@@ -117,6 +125,7 @@ main {
       }
       .painting__description {
         align-self: center;
+        width: 100%;
         h3 {
           border-bottom: 2px solid $blanc;
           max-width: 500px;
@@ -137,10 +146,9 @@ main {
       }
     }
 
-
-    #second-painting{
-display: flex;
-flex-direction: row-reverse;
+    #second-painting {
+      display: flex;
+      flex-direction: row-reverse;
     }
   }
   .gradient {
