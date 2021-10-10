@@ -303,14 +303,14 @@ h3 {
 p {
   font-size: 18px;
 }
+@media (max-width: 1024px) {
+  p {
+    font-size: 16px;
+  }
+}
 @media (max-width: 768px) {
   p {
     font-size: 14px;
-  }
-}
-@media (max-width: 320px) {
-  p {
-    font-size: 12px;
   }
 }
 
@@ -663,9 +663,17 @@ main #elemBottom {
     flex-direction: column;
   }
   body main .paintings .paintings__painting img {
-    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 75%;
     position: relative;
     object-fit: cover;
+  }
+  body main .paintings .paintings__painting img:not(.painting--2) {
+    margin-right: 0;
+  }
+  body main .paintings .paintings__painting img.painting--2 {
+    margin-left: 0;
   }
   body main .paintings .paintings__painting img::after {
     z-index: 2;
@@ -690,7 +698,7 @@ main #elemBottom {
   }
   body main .paintings .paintings__painting .painting__description p {
     margin-right: 0px !important;
-    width: 400px;
+    width: 75%;
     align-items: center;
     line-height: 140%;
     text-align: center;
@@ -737,6 +745,9 @@ main #elemBottom {
   }
   body main .elementStyle {
     position: absolute;
+  }
+  body main #citationHome {
+    color: #ffffff;
   }
   body main .citation {
     margin: 0 auto 0 auto;

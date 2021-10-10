@@ -58,11 +58,11 @@ h3 {
 
 p {
   font-size: 18px;
+  @include media("<=desktop") {
+    font-size: 16px;
+  }
   @include media("<=tablet") {
     font-size: 14px;
-  }
-  @include media("<=phone") {
-    font-size: 12px;
   }
 }
 

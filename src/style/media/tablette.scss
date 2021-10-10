@@ -1,7 +1,6 @@
 @include media("<=desktop") {
   body {
     background-color: $background;
-    //   background-color: red ;
 
     h3 {
       font-size: 32px;
@@ -9,7 +8,6 @@
     main {
       .elementStyle {
         position: absolute;
-        //   transform: scale(0.5) !important;
         width: 35vw;
       }
       padding-top: 35vh;
@@ -109,12 +107,17 @@
           flex-direction: column;
 
           img {
-            width: 50%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            width: 75%;
             position: relative;
             object-fit: cover;
-            // transform: translateZ(50px);
-            // -webkit-transform-style: preserve-3d;
-            // transform-style: preserve-3d;
+            &:not(.painting--2) {
+              margin-right: 0;
+            }
+            &.painting--2 {
+              margin-left: 0;
+            }
             &::after {
               z-index: 2;
               content: "";
@@ -138,7 +141,7 @@
             }
             p {
               margin-right: 0px !important;
-              width: 400px;
+              width: 75%;
               align-items: center;
               line-height: 140%;
               text-align: center;
